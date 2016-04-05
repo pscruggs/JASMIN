@@ -1,0 +1,319 @@
+<!--
+http://www.w3schools.com/icons/fontawesome_icons_webapp.asp
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>screen1</title>
+<link rel="stylesheet" href="./assets/css/jquery.mobile-1.4.5.min.css">
+<link rel="stylesheet" href="./assets/css/jqm-demos.css">
+<link rel="shortcut icon" href="./assets/css/images/favicon.ico">
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+<script src="./assets/js/jquery.js"></script>
+<!-- <script src="./assets/js/s3.js"></script> -->
+<!-- <script src="./assets/js/index.js"></script> -->
+<script src="./assets/js/jquery.mobile-1.4.5.min.js"></script>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="./assets/js/responsivevoice.js"></script>
+ <style>
+    div.scroll {
+                 background-color: #FFFFFF;
+                width: 500px;
+                 height: 200px;
+                overflow: scroll;
+                }
+  </style>
+</head>
+<body>
+<div data-role="page" class="jqm-demos ui-responsive-panel" id="panel_main" data-title="JASMIN">
+  <div data-role="header">
+  	<h2>&nbsp;</h2>
+  </div>
+  <div data-role="header">  	
+    <h1>JASMIN screen1</h1>
+    <!-- <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a> -->
+    <a href="index.html" data-icon="back" data-iconpos="notext">Back</a>
+    <a href="index.html" data-icon="gear" data-iconpos="notext">Settings</a> 
+
+  </div>
+  <!-- /header -->
+  
+  <div role="main" class="ui-content jqm-content jqm-fullwidth">
+    <h1>Login</h1>
+
+     <form class="userform">
+    
+      <label for="name">Username:</label>
+      <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><a href="screen2.html"  class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Login</a></div>
+        
+      </div>
+      <div class="ui-grid-a">
+        <label for="name">New User?</label>
+        
+        <div class="ui-block-b"><a href="#p_register"  class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Register</a></div>
+      </div>
+    </form>
+ 
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+ </div>
+  <!-- /content -->
+  
+  <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+    <ul data-role="listview">
+      <li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
+      <li><a href="#landingpage">Accordion</a></li>
+      <li><a href="#landingpage">Ajax Navigation</a></li>
+      <li><a href="#landingpage">Autocomplete</a></li>
+      <li><a href="#landingpage">Buttons</a></li>
+      <li><a href="#landingpage">Checkboxes</a></li>
+      <li><a href="#landingpage">Collapsibles</a></li>
+      <li><a href="#landingpage">Controlgroup</a></li>
+      <li><a href="#landingpage">Dialogs</a></li>
+      <li><a href="#landingpage">Fixed toolbars</a></li>
+      <li><a href="#landingpage">Flip switch toggle</a></li>
+      <li><a href="#landingpage">Footer toolbar</a></li>
+      <li><a href="#landingpage">Form elements</a></li>
+      <li><a href="#landingpage">Grids</a></li>
+      <li><a href="#landingpage">Header toolbar</a></li>
+      <li><a href="#landingpage">Icons</a></li>
+      <li><a href="#landingpage">Links</a></li>
+      <li><a href="#landingpage">Listviews</a></li>
+      <li><a href="#landingpage">Loader overlay</a></li>
+      <li><a href="#landingpage">Navbar</a></li>
+      <li><a href="#landingpage">Navbar, persistent</a></li>
+      <li><a href="#landingpage">Pages</a></li>
+      <li><a href="#landingpage">New</a></li>
+      <li><a href="#landingpage">Popup</a></li>
+      <li><a href="#landingpage">Radio buttons</a></li>
+      <li><a href="#landingpage">Select</a></li>
+      <li><a href="#landingpage">Slider, single</a></li>
+      <li><a href="#landingpage">New</a></li>
+      <li><a href="#landingpage">New</a></li>
+      <li><a href="#landingpage">New</a></li>
+      <li><a href="#landingpage">Text inputs & textarea</a></li>
+      <li><a href="#landingpage">Transitions</a></li>
+    </ul>
+  </div>
+  <!-- /panel -->
+  
+  <div data-role="panel" data-position="right" data-display="reveal" data-theme="a" id="add-form">
+     <!-- <div style="background: rgb(105, 105, 105); opacity:0.8;margin: auto;"> -->                       
+      <p> Settings </p>
+      <p id="msg"></p>
+    <!--	
+      <label for="Text">Text</label><input style="color:000000; background: rgb(194, 194, 214); opacity:0.8;" size="23" type="text" name="speech-msg" id="speech-msg" value="Say something here." x-webkit-speech>
+    -->
+        <div class="option">
+            <label for="voice">Voice</label>
+            <select name="voice" id="voice"></select>
+        </div> <!--
+        <div class="option">
+            <label for="volume">Volume</label>
+            <input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="1">
+        </div>
+        <div class="option">
+            <label for="rate">Rate</label>
+            <input type="range" min="0.1" max="10" step="0.1" name="rate" id="rate" value="1">
+        </div>
+        <div class="option">
+            <label for="pitch">Pitch</label>
+            <input type="range" min="0" max="2" step="0.1" name="pitch" id="pitch" value="1">
+        </div> -->
+    
+        <button id="save" data-rel="close">Save</button>                    
+   <!-- </div> -->
+  </div>
+  <!-- /panel --> 
+  
+</div>
+<!-- /page -->
+
+<div data-role="page" id="landingpage">
+  <div data-role="header">
+    <h1>Landing page</h1>
+  </div>
+  <!-- /header -->
+  
+  <div role="main" class="ui-content jqm-content">
+    <p>This is just a landing page.</p>
+    <a href="#panel_main" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini ui-icon-back ui-btn-icon-left">Back</a> </div>
+  <!-- /content --> 
+  
+</div>
+<!-- /page -->
+
+<div data-role="page" id="jasminbutton1">
+  <div data-role="header">
+    <h1>Login form</h1>
+  </div>
+  <!-- /header -->
+  
+  <div role="main" class="ui-content jqm-content">
+    <form class="userform">
+      <h2>Login</h2>
+      <label for="name">Username:</label>
+      <input type="text" name="name" id="name" value="" data-clear-btn="true" data-mini="true">
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" value="" data-clear-btn="true" autocomplete="off" data-mini="true">
+      <div class="ui-grid-a">
+        <div class="ui-block-a"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-b ui-mini">Cancel</a></div>
+        <div class="ui-block-b"><a href="#" data-rel="close" class="ui-btn ui-shadow ui-corner-all ui-btn-a ui-mini">Save</a></div>
+      </div>
+    </form>
+  </div>
+  <!-- /content --> 
+  
+</div>
+<!-- /page -->
+
+<!-- /page register -->
+<div data-role="page" class="jqm-demos ui-responsive-panel"  id="p_register">  
+  <div data-role="header">
+  	<h2>&nbsp;</h2>
+  </div>
+  <div data-role="header">  	
+    <h1>JASMIN</h1>
+    <!-- <a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a> -->
+    <a href="/" data-icon="back" data-iconpos="notext">Back</a>
+    <a href="#add-form" data-icon="gear" data-iconpos="notext">Settings</a> 
+  </div>
+  <!-- /header -->
+  
+  <div role="main" class="ui-content jqm-content jqm-fullwidth">
+  	<h1>Register</h1>
+      <form class="userform">
+        <ul data-role="listview" ui-corner-all ui-btn-inline ui-mini >
+     <li>Role 
+        <form action="action_page.php">
+         <select name="cars">
+           <option value="Parent">Parent</option>
+           <option value="Healthcare Provider">Healthcare Provider</option>
+           <option value="Child">Child</option>
+           <option value="Teacher">Teacher</option>
+           <option value="Mohit">Mohit</option>
+        </select>
+        
+        </form>
+    </li>
+            <li><label for="name">Username:</label>
+          <input type="text" name="regname" id="regname" value="" data-clear-btn="true" data-mini="true">
+          </li>
+            <li><label for="password">Password:</label>
+          <input type="password" name="regpassword" id="regpassword" value="" data-clear-btn="true" autocomplete="off" data-mini="true"></li>
+            <li><label for="password">Retype Password:</label>
+          <input type="password" name="reg2password" id="reg2password" value="" data-clear-btn="true" autocomplete="off" data-mini="true"></li>
+            <li><p> <div role="main" class="ui-content">
+                       <div class="ui-field-contain"> <!--Besider-->
+                          <fieldset data-role="controlgroup">
+                            <legend><div class="scroll">You are going to die anyway. So, do not blame anything on us.</div></legend>
+                          </fieldset>
+                            <input type="checkbox" name="checkbox-2" id="checkbox-2" class="chkbox">
+                            <label for="checkbox-2">I Agree</label>
+                            <a href="screen2.html" class="ui-btn ui-shadow ui-corner-all ui-btn-right ui-giant ui-icon-carat-r ui-btn-icon-right">Next</a>
+                        </div>
+                    </div>
+                </p> 
+            </li>
+        </ul>
+     </form>
+  </div>
+  <!-- /content --> 
+</div>
+<!-- /page register end -->
+
+<script>
+// JavaScript Document
+
+/*
+ * Check for browser support
+ */
+var supportMsg = document.getElementById('msg');
+
+if ('speechSynthesis' in window) {
+	supportMsg.innerHTML = 'Your browser <strong>supports</strong> speech synthesis.';
+} else {
+	supportMsg.innerHTML = 'Sorry your browser <strong>does not support</strong> speech synthesis.<br>Try this in <a href="http://www.google.co.uk/intl/en/chrome/browser/canary.html">Chrome Canary</a>.';
+	supportMsg.classList.add('not-supported');
+}
+
+var voicename;
+	
+	// Get the 'save' button
+	var saveButton = document.getElementById('save');
+
+	// Get the voice select element.
+	var voiceSelect = document.getElementById('voice');
+
+	// Fetch the list of voices and populate the voice options.
+	function loadVoices() {
+	  	// Fetch the available voices.
+		var voices = responsiveVoice.getVoices();
+	  
+	  	// Loop through each of the voices.
+		voices.forEach(function(voice, i) {
+			console.log(voice.name);  //working
+			// Create a new option element.
+			var option = document.createElement('option');
+			
+			// Set the options value and text.
+			option.value = voice.name;
+			option.innerHTML = voice.name;
+				  
+			// Add the option to the voice selector.
+			voiceSelect.appendChild(option);
+		});
+	}
+	
+	// Execute loadVoices.
+	loadVoices();
+
+	
+	
+	// Get the text input element.
+	var speechMsgInput = document.getElementById('speech-msg');
+	
+	// Get the 'speak' button
+	var speakButton = document.getElementById('speak');
+	
+	//
+	function s3Speak(text){
+		if (text.length>0)
+			responsiveVoice.speak(text);
+	}
+	
+	// Set up an event listener for when the 'speak' button is clicked.
+	speakButton.addEventListener('click', function(e) {
+		if (speechMsgInput.value.length > 0) {
+			s3Speak(speechMsgInput.value);
+		}
+	});	
+	
+	// Set up an event listener for when the 'save' button is clicked.
+	saveButton.addEventListener('click', function(e) {
+		if (voiceSelect.value) {
+			voicename = voiceSelect.value;
+			responsiveVoice.setDefaultVoice(voicename);
+			console.log("Selected voice:" + voicename);
+		}	
+	});		
+
+  .chkbox {
+   padding-left: 100px;
+   font-weight: bold;
+ }
+			
+</script>
+
+</body>
+</html>
